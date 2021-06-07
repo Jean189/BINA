@@ -1,4 +1,35 @@
-## GDP_per_capita
+## Libraries
+
+# filters & arrange
+library("dplyr")
+library("tidyr")
+
+# visualization
+
+library("ggplot2")
+library("ggExtra")
+library("tidyverse")
+library("ggpubr")
+library("patchwork")
+library("hrbrthemes")
+
+# descriptive statistics
+
+library("ggplot2")
+library("car")
+library("caret")
+
+# Long data
+library("reshape2")
+
+# seven avg
+library("zoo")
+
+# --- Set standards 
+# turn-off scientific notation like 1e+48
+options(scipen=999) 
+# pre-set the bw theme.
+theme_set(theme_bw())
 
 # Data Import local (Already filtered, see above)
 
@@ -44,7 +75,3 @@ gdp_project <- filter(GDP, Country_Code == "CHE" | Country_Code == "DEU" | Count
                         Country_Code == "ISR" | Country_Code == "EUU")
 
 View(gdp_project)
-
-# export
-
-write.csv(gdp_project, file = "C:/Users/jean-/OneDrive - Hochschule Luzern/Wirtschaftsinformatik/FS21/BINA/Case Study/BIP pro Kopf/gdp_project.csv", row.names = FALSE)
